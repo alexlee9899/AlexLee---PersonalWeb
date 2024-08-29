@@ -2,6 +2,7 @@
 import React, { useState, useTransition } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
+import aboutme from "../../public/images/projects/aboutme.png";
 const TAB_DATA = [
   {
     title: "Skills",
@@ -65,7 +66,7 @@ const AboutSection = () => {
       <div className="md:grid md:grid-cols-2 gap-12 items-start px-4 xl:gap-26 sm:py-16">
         <Image
           className="rounded-xl"
-          src={"/Images/projects/aboutme.png"}
+          src={aboutme}
           width={500}
           height={500}
           alt="Me"

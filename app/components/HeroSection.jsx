@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-
+import coder from "../../public/images/projects/coder.png";
 import { TypeAnimation } from "react-type-animation";
 const HeroSection = () => {
   return (
@@ -51,7 +51,7 @@ const HeroSection = () => {
           <div className="mt-4 lg:mt-0 lg:ml-[-20px]">
             <Image
               className="rounded-full"
-              src={"/Images/projects/coder.png"}
+              src={coder}
               alt="lee"
               width={500}
               height={500}
