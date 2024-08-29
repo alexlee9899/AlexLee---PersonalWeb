@@ -9,7 +9,7 @@ const projectsData = [
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/alexlee9899/game-hub",
-    previewUrl: "https://game-hub-phi-liard.vercel.app",
+    previewUrl: "https://game-hub-phi-liard.vercel.app/",
   },
   {
     id: 2,
