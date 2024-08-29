@@ -28,8 +28,8 @@ const projectsData = [
       "An online personal website that presents all aspects of your personal information in a diversified way, making it easy to make a lasting impression on job applications.",
     image: "/images/projects/3.png",
     tag: ["All", "Web", "E-commerce"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/alexlee9899/PersonalWeb",
+    previewUrl: "https://personal-web-lime-one.vercel.app/",
   },
 ];
 const ProjectSection = () => {
