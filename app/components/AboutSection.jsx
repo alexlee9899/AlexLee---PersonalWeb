@@ -86,7 +86,7 @@ const AboutSection = () => {
             About Me
           </h2>
           <p className="text-base text-[#ADB7BE] lg:text-lg">
-            Alex Li is a dedicated software developer with a strong passion for
+            Alex Lee is a dedicated software developer with a strong passion for
             both frontend and backend technologies. With three years of
             programming experience, he excels at crafting visually appealing and
             highly functional software solutions. Yanlin has demonstrated strong
