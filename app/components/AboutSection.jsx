@@ -47,11 +47,6 @@ const TAB_DATA = [
     content: (
       <ul>
         <li>Melfish: Front-End Developer (2023/10 - 2023/6)</li>
-        <li>Car Park Renting Platform Developer (2023/2 - 2023/6)</li>
-        <li>
-          Cloud-Based Sustainability Assessment Platform Developer (2022/6 -
-          2022/8)
-        </li>
       </ul>
     ),
   },
@@ -73,6 +68,7 @@ const AboutSection = () => {
           src="/Images/aboutme.png"
           width={500}
           height={500}
+          alt="Me"
         />
         <div>
           <h2 className="text-4xl font-bold text-white mb-4 sm:py-4">

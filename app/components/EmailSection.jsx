@@ -50,8 +50,8 @@ const EmailSection = () => {
         </h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
           Here I am, on the lookout for my next big adventure! Got a burning
-          question, or just want to say hello? Drop me a line, and I'll do my
-          best to reply faster than you can say "JavaScript"!
+          question, or just want to say hello? Drop me a line, and I&apos;ll do
+          my best to reply faster than you can say &quot;JavaScript&quot;!
         </p>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
           Email: lyanlin99@gmail.com
