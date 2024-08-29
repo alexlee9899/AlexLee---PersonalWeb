@@ -49,10 +49,9 @@ const HeroSection = () => {
         </div>
         <div className="place-self-center col-span-5">
           <div className="mt-4 lg:mt-0 lg:ml-[-20px]">
-            {/* 减少 margin-left 和 margin-top 在 lg 屏幕 */}
             <Image
               className="rounded-full"
-              src="/Images/projects/coder.png"
+              src={"/Images/projects/coder.png"}
               alt="lee"
               width={500}
               height={500}
