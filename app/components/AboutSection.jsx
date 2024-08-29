@@ -8,7 +8,17 @@ const TAB_DATA = [
     title: "Skills",
     id: "skills",
     content: (
-      <ul>
+      <ul
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(2, 1fr)",
+          gridAutoRows: "auto",
+          gap: "10px", // 间距，可根据需要调整
+          listStyleType: "none",
+          padding: 0,
+          margin: 0,
+        }}
+      >
         <li>React.js</li>
         <li>Next.js</li>
         <li>Node.js</li>
