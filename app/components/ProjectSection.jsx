@@ -36,7 +36,7 @@ const ProjectSection = () => {
   return (
     <>
       <h2
-        className="text-white font-bold text-4xl text-center m-4"
+        className="text-white font-bold text-4xl text-center m-4 py-4"
         id="projects"
       >
         My Projects
