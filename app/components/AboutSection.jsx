@@ -65,7 +65,7 @@ const AboutSection = () => {
       <div className="md:grid md:grid-cols-2 gap-12 items-start px-4 xl:gap-26 sm:py-16">
         <Image
           className="rounded-xl"
-          src="/Images/aboutme.png"
+          src="/Images/projects/aboutme.png"
           width={500}
           height={500}
           alt="Me"

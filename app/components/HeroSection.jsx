@@ -52,7 +52,7 @@ const HeroSection = () => {
             {/* 减少 margin-left 和 margin-top 在 lg 屏幕 */}
             <Image
               className="rounded-full"
-              src="/Images/coder.png"
+              src="/Images/projects/coder.png"
               alt="lee"
               width={500}
               height={500}
