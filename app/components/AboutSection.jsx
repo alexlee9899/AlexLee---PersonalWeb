@@ -57,7 +57,7 @@ const TAB_DATA = [
     id: "experience",
     content: (
       <ul>
-        <li>Melfish: Front-End Developer (2023/10 - 2023/6)</li>
+        <li>Melfish: Front-End Developer (2023/10 - 2024/6)</li>
       </ul>
     ),
   },
