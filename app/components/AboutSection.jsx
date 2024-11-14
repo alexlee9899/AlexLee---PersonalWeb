@@ -73,14 +73,16 @@ const AboutSection = () => {
   };
   return (
     <section className="text-white" id="about">
-      <div className="md:grid md:grid-cols-2 gap-12 items-start px-4 xl:gap-26 sm:py-16">
-        <Image
-          className="rounded-xl"
-          src={aboutme}
-          width={500}
-          height={500}
-          alt="Me"
-        />
+      <div className="md:grid md:grid-cols-2 gap-12 xl:gap-26 sm:py-16">
+        <div className="pt-6">
+          <Image
+            className="rounded-xl"
+            src={aboutme}
+            width={500}
+            height={500}
+            alt="Me"
+          />
+        </div>
         <div>
           <h2 className="text-4xl font-bold text-white mb-4 sm:py-4">
             About Me

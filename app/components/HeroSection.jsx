@@ -5,28 +5,31 @@ import coder from "../../public/images/projects/coder.png";
 import { TypeAnimation } from "react-type-animation";
 const HeroSection = () => {
   return (
-    <section>
-      <div className="grid grid-cols-1 sm:grid-cols-12">
-        <div className="place-self-center col-span-7 sm:text-left">
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-              Hello, I&apos;m {"  "}
+    <section className="min-w-[500px]">
+      <div className="grid sm:grid-cols-12">
+        <div className="col-start-1 col-span-7 sm:text-left">
+          <h1 className="text-white text-4xl sm:text-5xl lg:text-8xl font-extrabold min-h-[3em] w-[200px]">
+            <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+              Hello, I&apos;m{" "}
             </span>
-            <TypeAnimation
-              sequence={[
-                // Same substring at the start will only be typed out once, initially
-                "Lee",
-                1000, // wait 1s before replacing "Mice" with "Hamsters"
-                "a Web developer",
-                1000,
-                "someone who loves new challenges",
-                1000,
-              ]}
-              wrapper="span"
-              speed={5}
-              style={{ fontSize: "1em", display: "inline-block" }}
-              repeat={Infinity}
-            />
+            <span className="block min-h-[3em]">
+              <TypeAnimation
+                sequence={[
+                  // Same substring at the start will only be typed out once, initially
+                  "Lee",
+                  1000, // wait 1s before replacing "Mice" with "Hamsters"
+                  "Web developer",
+                  1000,
+                ]}
+                wrapper="span"
+                speed={3}
+                style={{
+                  fontSize: "1em",
+                  display: "inline-block",
+                }}
+                repeat={3}
+              />
+            </span>
           </h1>
           <p className="text-[#ADB7BE] text-lg mb-6 lg:text-xl">
             Web Developer | UNSW Information Technology
@@ -47,7 +50,7 @@ const HeroSection = () => {
             </a>
           </div>
         </div>
-        <div className="place-self-center col-span-5">
+        <div className="col-start-8 col-span-5">
           <div className="mt-4 lg:mt-0 lg:ml-[-20px]">
             <Image
               className="rounded-full"
