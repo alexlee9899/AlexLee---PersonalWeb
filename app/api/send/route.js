@@ -4,14 +4,14 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req) {
   try {
-    const body = await req.json(); // 获取请求体
+    const body = await req.json(); // Get request body
     const { from, subject, message } = body;
 
     const { data, error } = await resend.emails.send({
-      from: "hello@contactalexlee.com", // 使用用户输入的邮箱作为发件人
-      to: ["lyanlin99@gmail.com", from], // 固定接收邮箱
+      from: "hello@contactalexlee.com", // Use a fixed sender email
+      to: ["lyanlin99@gmail.com", from], // Fixed recipient email
       subject: subject || "No Subject",
-      html: `<p>${message}</p>`, // 使用用户输入的消息
+      html: `<p>${message}</p>`, // Use user input message
     });
     console.log("Email send response:", data);
     console.error("Email send error:", error);

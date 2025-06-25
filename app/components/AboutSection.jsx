@@ -3,65 +3,7 @@ import React, { useState, useTransition } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
 import aboutme from "../../public/images/projects/aboutme.png";
-const TAB_DATA = [
-  {
-    title: "Skills",
-    id: "skills",
-    content: (
-      <ul
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(2, 1fr)",
-          gridAutoRows: "auto",
-          gap: "10px", // 间距，可根据需要调整
-          listStyleType: "none",
-          padding: 0,
-          margin: 0,
-        }}
-      >
-        <li>React.js</li>
-        <li>Next.js</li>
-        <li>Node.js</li>
-        <li>TypeScript</li>
-        <li>JavaScript</li>
-        <li>PostgreSQL</li>
-        <li>MongoDB</li>
-        <li>Tailwind CSS</li>
-        <li>Express.js</li>
-        <li>Flask</li>
-        <li>Git & GitHub</li>
-        <li>RESTful APIs</li>
-        <li>Prisma</li>
-        <li>Jest</li>
-        <li>IBM Watson Assistant</li>
-      </ul>
-    ),
-  },
-  {
-    title: "Education",
-    id: "education",
-    content: (
-      <ul>
-        <li>
-          Master of Information Technology - University of New South Wales
-        </li>
-        <li>
-          Bachelor of Information Technology - Henan Institute of Science and
-          Technology
-        </li>
-      </ul>
-    ),
-  },
-  {
-    title: "Experience",
-    id: "experience",
-    content: (
-      <ul>
-        <li>Melfish: Front-End Developer (2023/10 - 2024/6)</li>
-      </ul>
-    ),
-  },
-];
+import { skillsData, educationData, experienceData } from "../../public/cvdata";
 
 const AboutSection = () => {
   const [tab, setTab] = useState("skills");
@@ -71,6 +13,73 @@ const AboutSection = () => {
       setTab(name);
     });
   };
+
+  const renderSkills = () => {
+    return (
+      <ul
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(2, 1fr)",
+          gridAutoRows: "auto",
+          gap: "10px",
+          listStyleType: "none",
+          padding: 0,
+          margin: 0,
+        }}
+      >
+        {skillsData.map((skill, index) => (
+          <li key={index}>{skill}</li>
+        ))}
+      </ul>
+    );
+  };
+
+  const renderEducation = () => {
+    return (
+      <ul className="space-y-4">
+        {educationData.map((edu, index) => (
+          <li key={index}>
+            <div className="font-semibold">{edu.degree}</div>
+            <div className="text-sm text-gray-400">
+              {edu.institution} ({edu.period})
+            </div>
+          </li>
+        ))}
+      </ul>
+    );
+  };
+
+  const renderExperience = () => {
+    return (
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {experienceData.map((exp, index) => (
+          <div key={index} className="bg-[#181818] rounded-xl p-4 h-full">
+            <div className="font-semibold">{exp.position}</div>
+            <div className="text-sm text-gray-400 mb-2">{exp.period}</div>
+            <ul className="list-disc pl-5 space-y-1 text-sm text-[#ADB7BE]">
+              {exp.responsibilities.map((resp, idx) => (
+                <li key={idx}>{resp}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    );
+  };
+
+  const renderTabContent = () => {
+    switch (tab) {
+      case "skills":
+        return renderSkills();
+      case "education":
+        return renderEducation();
+      case "experience":
+        return renderExperience();
+      default:
+        return null;
+    }
+  };
+
   return (
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-12 xl:gap-26 sm:py-16">
@@ -88,12 +97,14 @@ const AboutSection = () => {
             About Me
           </h2>
           <p className="text-base text-[#ADB7BE] lg:text-lg">
-            Alex Lee is a dedicated software developer with a strong passion for
-            both frontend and backend technologies. With three years of
-            programming experience, he excels at crafting visually appealing and
-            highly functional software solutions. Yanlin has demonstrated strong
-            teamwork and problem-solving abilities, consistently tackling
-            challenges and contributing significant value to each project.
+            Alex Lee is a dedicated software engineer focused on full-stack
+            development with solid foundations in both frontend and backend
+            technologies. With three years of programming experience, he can
+            build visually appealing and efficient software solutions. He is
+            pursuing a Master's degree in Information Technology at UNSW,
+            focusing on Web Development and AI applications. Alex excels in
+            teamwork and problem-solving, effectively addressing challenges and
+            contributing significant value to projects.
           </p>
           <div className="flex mt-8 gap-3">
             <TabButton
@@ -115,9 +126,7 @@ const AboutSection = () => {
               Experience
             </TabButton>
           </div>
-          <div className="mt-8">
-            {TAB_DATA.find((t) => t.id === tab).content}
-          </div>
+          <div className="mt-8">{renderTabContent()}</div>
         </div>
       </div>
     </section>

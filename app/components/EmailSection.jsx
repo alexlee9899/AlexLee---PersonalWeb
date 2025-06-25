@@ -9,14 +9,14 @@ const EmailSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
-      from: e.target.email.value, // 用户输入的邮箱作为发件人
+      from: e.target.email.value, // user's email as sender
       subject: e.target.subject.value,
       message: e.target.message.value,
     };
 
     const JSONdata = JSON.stringify(data);
     console.log(JSONdata);
-    const endpoint = "/api/send"; // API 路由
+    const endpoint = "/api/send"; // API route
 
     const options = {
       method: "POST",
@@ -45,19 +45,22 @@ const EmailSection = () => {
       className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
     >
       <div className="z-10">
-        <h5 className="text-xl font-bold text-white my-2">
-          Let&apos;s Connect
-        </h5>
+        <h5 className="text-xl font-bold text-white my-2">Contact Me</h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
-          Here I am, on the lookout for my next big adventure! Got a burning
-          question, or just want to say hello? Drop me a line, and I&apos;ll do
-          my best to reply faster than you can say &quot;JavaScript&quot;!
+          I'm ready for the next challenge! If you have any questions or would
+          like to collaborate, please feel free to contact me. I'll reply to
+          your message as soon as possible!
         </p>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
           Email: lyanlin99@gmail.com
         </p>
+        <p className="text-[#ADB7BE] mb-4 max-w-md">Phone: +61 426 103 899</p>
         <div className="socials flex flex-row gap-2">
-          <Link href="https://github.com">
+          <Link
+            href="https://github.com/alexlee9899"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image
               className="bg-white border border-white rounded-xl"
               src="/images/githubIcon.png"
@@ -66,7 +69,11 @@ const EmailSection = () => {
               height={50}
             />
           </Link>
-          <Link href="https://linkedin.com">
+          <Link
+            href="https://linkedin.com/in/alex-lee-developer"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image
               className="bg-white border border-white rounded-xl"
               src="/images/linkedIcon.png"
@@ -89,7 +96,7 @@ const EmailSection = () => {
                 htmlFor="email"
                 className="text-white block mb-2 text-sm font-medium"
               >
-                Your email
+                Your Email
               </label>
               <input
                 name="email"
@@ -127,7 +134,7 @@ const EmailSection = () => {
                 name="message"
                 id="message"
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="JavaScript"
+                placeholder="I'd like to know more about your projects..."
               />
             </div>
             <button

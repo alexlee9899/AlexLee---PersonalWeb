@@ -18,7 +18,11 @@ const HeroSection = () => {
                   // Same substring at the start will only be typed out once, initially
                   "Lee",
                   1000, // wait 1s before replacing "Mice" with "Hamsters"
-                  "Web developer",
+                  "Web Developer",
+                  1000,
+                  "Full Stack Engineer",
+                  1000,
+                  "UI/UX Designer",
                   1000,
                 ]}
                 wrapper="span"
@@ -27,19 +31,20 @@ const HeroSection = () => {
                   fontSize: "1em",
                   display: "inline-block",
                 }}
-                repeat={3}
+                repeat={Infinity}
               />
             </span>
           </h1>
           <p className="text-[#ADB7BE] text-lg mb-6 lg:text-xl">
-            Web Developer | UNSW Information Technology
+            Web Developer | UNSW Information Technology | React & Next.js
+            Specialist
           </p>
           <div>
             <a
               href="#contact"
               className="px-6 py-3 w-full sm:w-fit rounded-full text-white mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-200"
             >
-              Hire me
+              Contact Me
             </a>
             <a
               href="/ReseumOfAlex.pdf"
@@ -58,7 +63,7 @@ const HeroSection = () => {
               alt="lee"
               width={500}
               height={500}
-              sizes="(min-width: 720px) 300px, 300px" // 根据屏幕大小调整图片尺寸
+              sizes="(min-width: 720px) 300px, 300px" // adjust image size based on screen size
             />
           </div>
         </div>
