@@ -17,7 +17,7 @@ const ProjectDetails = ({ params }) => {
     return (
       <div className="flex min-h-screen flex-col bg-[#121212] text-white">
         <Navbar />
-        <div className="container mt-24 mx-auto px-12 py-4">
+        <div className="container mx-auto px-12 py-4 flex-grow">
           <div className="flex flex-col items-center justify-center min-h-[50vh]">
             <h1 className="text-4xl font-bold mb-4">Project Not Found</h1>
             <Link
@@ -37,7 +37,7 @@ const ProjectDetails = ({ params }) => {
   return (
     <div className="flex min-h-screen flex-col bg-[#121212]">
       <Navbar />
-      <div className="container mt-24 mx-auto px-12 py-4">
+      <div className="container mx-auto px-12 py-4 flex-grow">
         <Link
           href="/#projects"
           className="flex items-center text-purple-500 hover:text-purple-400 mb-6"
