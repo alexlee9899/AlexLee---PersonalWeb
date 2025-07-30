@@ -70,7 +70,7 @@ const EmailSection = () => {
             />
           </Link>
           <Link
-            href="https://linkedin.com/in/alex-lee-developer"
+            href="https://www.linkedin.com/in/alex-yanlin-li/"
             target="_blank"
             rel="noopener noreferrer"
           >
