@@ -11,6 +11,22 @@ export const projectsData = [
   },
   {
     id: 2,
+    title: "Achoio",
+    description:
+      "Achoio is an online collaboration platform for PhD researchers in speech synthesis, enabling users to create and manage voice projects and audio samples, browse and rate others’ work, and provide high‑quality feedback data for AI model correction and optimization.",
+    image: "/images/projects/achoio.png",
+    tag: [
+      "Speech Synthesis",
+      "Audio Feedback",
+      "Machine Learning",
+      "React",
+      "shadcn/ui",
+    ],
+    gitUrl: "",
+    previewUrl: "https://www.achoio.com/",
+  },
+  {
+    id: 3,
     title: "VTGMAMA E-commerce Platform",
     description:
       "A scalable e-commerce platform built from scratch using Next.js 15 and FastAPI. Supports full-stack features such as product listing, checkout flow, admin dashboard, and user authentication.",
@@ -20,17 +36,17 @@ export const projectsData = [
     previewUrl: "https://vtgmama.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
     title: "Game-Hub",
     description:
       "A game discovery platform built with React.js, helping users explore and find their favorite games from a curated selection. Implemented game search, filtering, and sorting features, and integrated with game APIs.",
     image: "/images/projects/Gamehub.png",
-    tag: ["Web", "React", "TypeScript"],
+    tag: ["Third Party API", "React", "TypeScript"],
     gitUrl: "https://github.com/alexlee9899/game-hub-Third-Party-API-",
     previewUrl: "https://game-hub-phi-liard.vercel.app/",
   },
   {
-    id: 4,
+    id: 5,
     title: "Jobpin AI Subscription Platform",
     description:
       "A subscription-based pricing and billing system built with Nest.js and MongoDB. Includes responsive UI for plan management and Dockerized backend deployed with CI/CD pipelines.",
@@ -40,7 +56,7 @@ export const projectsData = [
     previewUrl: "",
   },
   {
-    id: 5,
+    id: 6,
     title: "Personal Website Development",
     description:
       "Designed and developed a responsive personal website to showcase personal information, skills, and project experience. Built with Next.js and Tailwind CSS, implementing dark theme, dynamic content loading, and contact form functionality.",
@@ -69,6 +85,25 @@ export const projectDetails = {
   },
   2: {
     features: [
+      "Full‑stack architecture with React frontend, Node.js/Express backend, MongoDB for metadata and AWS S3 for audio storage",
+      "Secure JWT‑based authentication with account registration, login and role‑based permissions (researcher, reviewer, admin)",
+      "RESTful APIs for project creation, audio uploads, feedback submission and data export in CSV/JSON",
+      "Interactive waveform player with version history, real‑time playback controls and timestamped comments",
+      "Collaborative review dashboard enabling multi‑dimensional scoring, aggregated feedback metrics and notification workflows",
+      "Responsive design optimized for desktop and mobile, with global state management Context API",
+    ],
+
+    technologies: [
+      { name: "Next.js", class: "bg-black/30 text-white" },
+      { name: "FastAPI", class: "bg-yellow-900/30 text-yellow-400" },
+      { name: "shadcn/ui", class: "bg-blue-900/30 text-blue-400" },
+      { name: "MongoDB", class: "bg-green-900/30 text-green-400" },
+      { name: "Tailwind CSS", class: "bg-blue-900/30 text-blue-400" },
+      { name: "Context API", class: "bg-purple-900/30 text-purple-400" },
+    ],
+  },
+  3: {
+    features: [
       "Full-stack architecture with Next.js frontend and FastAPI backend",
       "Secure JWT-based authentication with login, register, and role control",
       "RESTful APIs for product management, user operations, and checkout",
@@ -83,7 +118,7 @@ export const projectDetails = {
       { name: "Context API", class: "bg-purple-900/30 text-purple-400" },
     ],
   },
-  3: {
+  4: {
     features: [
       "Game search and filtering functionality, supporting filtering by type, platform, and rating",
       "Responsive design, adapting to mobile devices and desktop platforms",
@@ -99,7 +134,7 @@ export const projectDetails = {
       { name: "React Query", class: "bg-red-900/30 text-red-400" },
     ],
   },
-  4: {
+  5: {
     features: [
       "CRUD-based subscription system for pricing plans and user billing",
       "Modular UI built with React and Emotion.js for plan comparison",
@@ -115,7 +150,7 @@ export const projectDetails = {
       { name: "Material UI", class: "bg-indigo-900/30 text-indigo-400" },
     ],
   },
-  5: {
+  6: {
     features: [
       "Responsive design, adapting to various screen sizes",
       "Dark theme interface, providing a modern visual experience",
@@ -146,10 +181,10 @@ export const skillsData = [
   "Tailwind CSS / Sass",
   "Redux / Context API",
   "Docker / PM2",
-  "CI/CD (GitHub Actions, Jenkins)",
-  "AWS EC2 / S3 / Pulumi",
+  "CI/CD (GitHub Actions, Git Lab)",
+  "AWS EC2 / S3 / CloudFront",
   "Socket.IO / Custom TCP Protocol",
-  "GraphQL / RESTful APIs",
+  "RESTful APIs",
   "Git & GitHub / Bitbucket",
   "Jest / Postman / Testing",
   "UI/UX Design",
